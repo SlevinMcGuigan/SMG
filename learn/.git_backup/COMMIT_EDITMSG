@@ -1,0 +1,1 @@
+added hash.rb, fixed all hash test so that they work with 1.8 and 1.9
