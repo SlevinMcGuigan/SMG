@@ -1,9 +1,0 @@
-0000000000000000000000000000000000000000 a3c21a103b68afa888ad311315669bb0896cd0cd Slevin McGuigan <Slevin.McGuigan@googlemail.com> 1285271511 +0200	commit (initial): first learn tests for class String
-a3c21a103b68afa888ad311315669bb0896cd0cd 97a12c78871bee0b953195ad142f1c901d6e66ec Max Wippert <Max@desktop.(none)> 1286227104 +0200	commit: added overloaded constructors, regexp, string and open3 tests
-97a12c78871bee0b953195ad142f1c901d6e66ec 625849989b27b046c47e14b85a254477c01f1e08 Slevin McGuigan <Slevin.McGuigan@googlemail.com> 1286227168 +0200	commit (amend): added overloaded constructors, regexp, string and open3 tests
-625849989b27b046c47e14b85a254477c01f1e08 f676d0d41fc5c7637dfe3d9ecdca21f964eb67b7 Slevin McGuigan <Slevin.McGuigan@googlemail.com> 1288822689 +0100	commit: first commit from within linux
-f676d0d41fc5c7637dfe3d9ecdca21f964eb67b7 83a97711446571c06425e0565ca50b434501f701 Slevin McGuigan <Slevin.McGuigan@googlemail.com> 1288822769 +0100	commit: deleted: overloaded_constructor_class.rb
-83a97711446571c06425e0565ca50b434501f701 d8e1ca9aaae3d45a270637c70a3d159a83e7727b Slevin McGuigan <Slevin.McGuigan@googlemail.com> 1288822967 +0100	commit: second try for the first commit from Linux
-d8e1ca9aaae3d45a270637c70a3d159a83e7727b 39ad1f5a189392cc059dd9bf142c8d0bced1dd91 Slevin McGuigan <Slevin.McGuigan@googlemail.com> 1288895797 +0100	commit: removed non-ASCII characters
-39ad1f5a189392cc059dd9bf142c8d0bced1dd91 de7b4cd63933624e73f3058732f2e2cfe7b952a9 Slevin McGuigan <Slevin.McGuigan@googlemail.com> 1289039109 +0100	commit: added dir_test.rb, fixed open3_test.rb
-de7b4cd63933624e73f3058732f2e2cfe7b952a9 e47ec8c74b27566134534fc06db6e6a187ab8ceb Slevin McGuigan <Slevin.McGuigan@googlemail.com> 1290340948 +0100	commit: added hash.rb, fixed all hash test so that they work with 1.8 and 1.9
