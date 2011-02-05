@@ -14,7 +14,8 @@ class Open3Test < Test::Unit::TestCase
     stdin, stdout, stderr = popen3('pwd')
     a = stdout.readlines()
     assert_instance_of(Array, a,                       'expecting stdout.readlines to return an Array')
-    assert_equal("/home/egon/mount_d/MAX DATEIEN/SMG/learn\n", a[0], 'using readlines to squeeze stdout into a string')
+    #assert_equal("/home/egon/mount_d/MAX DATEIEN/SMG/learn\n", a[0], 'using readlines to squeeze stdout into a string')
+    assert_equal("/Users/mwippert/Documents/0000.00 inovex/2010.09 learn ruby/learn", a[0], 'using readlines to squeeze stdout into a string')
   end
 
   def test_simple_ls
@@ -27,18 +28,18 @@ class Open3Test < Test::Unit::TestCase
   def test_this_suxx
     stdout = %x[ ls . ]
     assert_instance_of(String, stdout, 'expecting a String object to be retuned by %x[]')
-    assert_equal('/home/egon/mount_d/MAX DATEIEN/SMG/learn', Dir.pwd, 'this is where everything begins...')
+    assert_equal('/Users/mwippert/Documents/0000.00 inovex/2010.09 learn ruby/learn', Dir.pwd, 'this is where everything begins...')
     Dir.chdir('.')
-    assert_equal('/home/egon/mount_d/MAX DATEIEN/SMG/learn', Dir.pwd, 'still there...')
+    assert_equal('/Users/mwippert/Documents/0000.00 inovex/2010.09 learn ruby/learn', Dir.pwd, 'still there...')
     Dir.chdir('..')
-    assert_equal('/home/egon/mount_d/MAX DATEIEN/SMG', Dir.pwd, 'now everything fails!')
+    assert_equal('/Users/mwippert/Documents/0000.00 inovex/2010.09 learn ruby/learn', Dir.pwd, 'now everything fails!')
   end 
  
   def test_simple_cd
     stdout = %x[ ls . ]
     assert_instance_of(String, stdout, 'expecting a String object to be retuned by %x[]')
-    assert_equal('/home/egon/mount_d/MAX DATEIEN/SMG/learn', Dir.pwd, 'using class Dir to get the pwd')
-    assert_equal('/home/egon/mount_d/MAX DATEIEN/SMG/learn', Dir.pwd, 'still there...')
+    assert_equal('/Users/mwippert/Documents/0000.00 inovex/2010.09 learn ruby/learn', 'using class Dir to get the pwd')
+    assert_equal('/Users/mwippert/Documents/0000.00 inovex/2010.09 learn ruby/learn', Dir.pwd, 'still there...')
   end 
  
 #  def test_stderr_cd_into_the_nirvana
