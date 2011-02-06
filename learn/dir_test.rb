@@ -1,12 +1,13 @@
 require 'test/unit'
 
 class DirTest < Test::Unit::TestCase
+  
   def test_do_something_in_pwd
-    assert_equal('/home/egon/mount_d/MAX DATEIEN/SMG/learn', Dir.pwd, 'using class Dir to get the pwd')
+    assert_equal('/Users/mwippert/Documents/0000.00 inovex/2010.09 learn ruby/learn', Dir.pwd, 'using class Dir to get the pwd')
     Dir.chdir('..')
-    assert_equal('/home/egon/mount_d/MAX DATEIEN/SMG', Dir.pwd, 'one directory up')
+    assert_equal('/Users/mwippert/Documents/0000.00 inovex/2010.09 learn ruby', Dir.pwd, 'one directory up')
     Dir.chdir('learn')
-    assert_equal('/home/egon/mount_d/MAX DATEIEN/SMG/learn', Dir.pwd, 'back again')
+    assert_equal('/Users/mwippert/Documents/0000.00 inovex/2010.09 learn ruby/learn', Dir.pwd, 'back again')
   end
  
   def test_xhange_pwd
@@ -14,11 +15,11 @@ class DirTest < Test::Unit::TestCase
   end
 
   def test_do_something_in_pwd_again
-    assert_equal('/home/egon/mount_d/MAX DATEIEN/SMG/learn', Dir.pwd, 'using class Dir to get the pwd - again')
+    assert_equal('/Users/mwippert/Documents/0000.00 inovex/2010.09 learn ruby/learn', Dir.pwd, 'using class Dir to get the pwd - again')
     Dir.chdir('..')
-    assert_equal('/home/egon/mount_d/MAX DATEIEN/SMG', Dir.pwd, 'one directory up - again ')
+    assert_equal('/Users/mwippert/Documents/0000.00 inovex/2010.09 learn ruby', Dir.pwd, 'one directory up - again ')
     Dir.chdir('learn')
-    assert_equal('/home/egon/mount_d/MAX DATEIEN/SMG/learn', Dir.pwd, 'back again - again')
+    assert_equal('/Users/mwippert/Documents/0000.00 inovex/2010.09 learn ruby/learn', Dir.pwd, 'back again - again')
   end
 
 end

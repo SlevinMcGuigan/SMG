@@ -15,7 +15,7 @@ class Open3Test < Test::Unit::TestCase
     a = stdout.readlines()
     assert_instance_of(Array, a,                       'expecting stdout.readlines to return an Array')
     #assert_equal("/home/egon/mount_d/MAX DATEIEN/SMG/learn\n", a[0], 'using readlines to squeeze stdout into a string')
-    assert_equal("/Users/mwippert/Documents/0000.00 inovex/2010.09 learn ruby/learn", a[0], 'using readlines to squeeze stdout into a string')
+    assert_equal("/Users/mwippert/Documents/0000.00 inovex/2010.09 learn ruby/learn\n", a[0], 'using readlines to squeeze stdout into a string')
   end
 
   def test_simple_ls
@@ -32,13 +32,14 @@ class Open3Test < Test::Unit::TestCase
     Dir.chdir('.')
     assert_equal('/Users/mwippert/Documents/0000.00 inovex/2010.09 learn ruby/learn', Dir.pwd, 'still there...')
     Dir.chdir('..')
-    assert_equal('/Users/mwippert/Documents/0000.00 inovex/2010.09 learn ruby/learn', Dir.pwd, 'now everything fails!')
+    assert_equal('/Users/mwippert/Documents/0000.00 inovex/2010.09 learn ruby', Dir.pwd, 'now everything fails!')
   end 
  
   def test_simple_cd
     stdout = %x[ ls . ]
     assert_instance_of(String, stdout, 'expecting a String object to be retuned by %x[]')
-    assert_equal('/Users/mwippert/Documents/0000.00 inovex/2010.09 learn ruby/learn', 'using class Dir to get the pwd')
+    assert_equal('/Users/mwippert/Documents/0000.00 inovex/2010.09 learn ruby/learn', Dir.pwd, 'using class Dir to get the pwd')
+    stdout = %x[ cd .. ]
     assert_equal('/Users/mwippert/Documents/0000.00 inovex/2010.09 learn ruby/learn', Dir.pwd, 'still there...')
   end 
  

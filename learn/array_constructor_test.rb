@@ -1,5 +1,5 @@
 require 'test/unit'
-require 'array_constructor_class'
+require './array_constructor_class.rb'
 
 class ArrayConstructorTest < Test::Unit::TestCase
 

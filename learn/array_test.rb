@@ -47,19 +47,35 @@ class ArrayTest < Test::Unit::TestCase
     assert_kind_of(Fixnum, f,  'f is a Fixnum')
   end
 
-  def test_when_does_a_fixnum_become_a_bignum
+#  2011-02-06 works fine on my windows boy, most probably because this is 32 Bit
+#             fails on my Mac
+#  def test_when_does_a_fixnum_become_a_bignum_32bit 
+#    f = 1234
+#    assert_kind_of(Fixnum, f,  '1234 is still Fixnum')
+#    f = 2**30-1
+#    assert_equal(1073741823,f, '2^30 is 1073741824; -1 ==> still Fixnum')
+#    assert_kind_of(Fixnum, f,  '2^30-1 is still Fixnum')
+#    
+#    f = f + 1
+#    assert_kind_of(Bignum, f,  '2^30 is already Bignum')
+#
+#    f = f - 1
+#    assert_equal(1073741823,f, 'back to 2^30-1')
+#    assert_kind_of(Fixnum, f,  'f beeing 2^30-1 is on the fly converted to Fixnum again')
+#  end
+
+  def test_when_does_a_fixnum_become_a_bignum_64bit
     f = 1234
     assert_kind_of(Fixnum, f,  '1234 is still Fixnum')
-    f = 2**30-1
-    assert_equal(1073741823,f, '2^30 is 1073741824; -1 ==> still Fixnum')
-    assert_kind_of(Fixnum, f,  '2^30-1 is still Fixnum')
+    f = 2**62-1
+    assert_kind_of(Fixnum, f,  '2^62-1 is still Fixnum')
     
     f = f + 1
-    assert_kind_of(Bignum, f,  '2^30 is already Bignum')
+    assert_kind_of(Bignum, f,  '2^62 is already Bignum')
 
     f = f - 1
-    assert_equal(1073741823,f, 'back to 2^30-1')
-    assert_kind_of(Fixnum, f,  'f beeing 2^30-1 is on the fly converted to Fixnum again')
+    assert_kind_of(Fixnum, f,  'f beeing 2^62-1 is on the fly converted to Fixnum again')
   end
+
 
 end

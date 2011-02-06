@@ -1,5 +1,5 @@
 require 'test/unit'
-require 'variables_scope_class'
+require './variables_scope_class.rb'
 
 class VariablesScopeTest < Test::Unit::TestCase
 
